@@ -4,7 +4,7 @@
 
     "logging": {
         "files": {
-            "level": "info",
+            "level": "error",
             "directory": "logs",
             "flushInterval": 5
         },
@@ -19,23 +19,8 @@
         "clusterForks": "auto",
         "poolAddress": "48Y4SoUJM5L3YXBEfNQ8bFNsvTNsqcH5Rgq8RF7BwpgvTBj2xr7CmWVanaw7L4U9MnZ4AG7U6Pn1pBhfQhFyFZ1rL1efL8z",
         "blockRefreshInterval": 1000,
-        "minerTimeout": 900,
+        "minerTimeout": 1666,
         "ports": [
-            {
-                "port": 3333,
-                "difficulty": 100,
-                "desc": "Low end hardware"
-            },
-            {
-                "port": 5555,
-                "difficulty": 2000,
-                "desc": "Mid range hardware"
-            },
-            {
-                "port": 7777,
-                "difficulty": 10000,
-                "desc": "High end hardware"
-            },
             {
                 "port": 8888,
                 "difficulty": 10000,
@@ -44,8 +29,8 @@
             }
         ],
         "varDiff": {
-            "minDiff": 2,
-            "maxDiff": 100000,
+            "minDiff": 10000,
+            "maxDiff": 10000000,
             "targetTime": 100,
             "retargetTime": 30,
             "variancePercent": 30,
@@ -73,7 +58,7 @@
     },
 
     "payments": {
-        "enabled": true,
+        "enabled": false,
         "interval": 600,
         "maxAddresses": 50,
         "mixin": 3,
@@ -83,7 +68,7 @@
     },
 
     "blockUnlocker": {
-        "enabled": true,
+        "enabled": false,
         "interval": 30,
         "depth": 60,
         "poolFee": 2,
@@ -92,7 +77,7 @@
     },
 
     "api": {
-        "enabled": true,
+        "enabled": false,
         "hashrateWindow": 600,
         "updateInterval": 5,
         "port": 8117,
