@@ -136,7 +136,7 @@ function spawnPoolWorkers(){
         if (!config.poolServer.clusterForks)
             return 1;
         if (config.poolServer.clusterForks === 'auto')
-            return os.cpus().length;
+            return 2;
         if (isNaN(config.poolServer.clusterForks))
             return 1;
         return config.poolServer.clusterForks;
